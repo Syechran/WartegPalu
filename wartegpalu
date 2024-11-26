@@ -1,0 +1,260 @@
+#include<stdio.h>
+
+int main(){
+    int menuKategori,subMenu,totalHarga;
+    int nasiPutih = 3000, nasiGoreng = 15000, nasiBakar = 10000, nasiKuning = 12000;
+    int nasiDaunJeruk = 7000, nasiUduk = 12000, nasiMerah = 4000;
+    int ayamGoreng = 15000, ayamBakar = 17000, ayamGeprek = 15000, ayamTulangLunak = 15000;
+    int ayamPop = 8000;
+    int ikanGoreng = 15000, ikanBakar = 18000, ikanGurame = 23000, udangSausTiram = 19000;
+    int bebekGoreng = 18000, bebekBakar = 20000, bebekPanggang = 23000;
+    int tahuGoreng = 5000, pepesTahu = 9000;
+    int tempeGoreng = 6000, tempeBacem = 8000, tempeOrek = 6000;
+    int perkedalJagung = 3000, perkedalKentang = 6000;
+    int sayurSop = 12000, sayurAsem = 12000, sotoPalu = 13000, sayurLodeh = 12000;
+    int esTehManis = 5000, tehManisPanas = 4000, tehTawarPanas = 2000, tehTawarDingin = 3000;
+    int kopiABC = 5000, kopiSusu = 7000, redVelvet = 7000, matcha = 7000;
+    int popIceAllVariants = 5000, nutrisariAllVariants = 5000, airMineral = 3000;
+    int quantity[] = {};
+    char Konfirmasi;
+
+    printf("\n");
+    printf(" __     __     ______     ______     ______   ______     ______   \n");
+    printf("/\\ \\  _ \\ \\   /\\  __ \\   /\\  == \\   /\\__  _\\ /\\  ___\\   /\\  ___\\  \n");
+    printf("\\ \\ \\/ \".\\ \\  \\ \\  __ \\  \\ \\  __<   \\/_/\\ \\/ \\ \\  __\\   \\ \\ \\__ \\ \n");
+    printf(" \\ \\__/\".~\\_\\  \\ \\_\\ \\_\\  \\ \\_\\ \\_\\    \\ \\_\\  \\ \\_____\\  \\ \\_____\\\n");
+    printf("  \\/_/   \\/_/   \\/_/\\/_/   \\/_/ /_/     \\/_/   \\/_____/   \\/_____/ \n");
+    printf("                                                                    \n");
+    printf(" ______   ______     __         __  __                             \n");
+    printf("/\\  == \\ /\\  __ \\   /\\ \\       /\\ \\/\\ \\                            \n");
+    printf("\\ \\  _-/ \\ \\  __ \\  \\ \\ \\____  \\ \\ \\_\\ \\                           \n");
+    printf(" \\ \\_\\    \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_____\\                          \n");
+    printf("  \\/_/     \\/_/\\/_/   \\/_____/   \\/_____/                          \n");
+    printf("\n");
+    printf("\n");
+
+    do{
+    printf("=== Menu ===\n");
+    printf("1. Nasi\n");
+    printf("2. Ayam\n");
+    printf("3. Seafood\n");
+    printf("4. Bebek\n");
+    printf("5. Tahu\n");
+    printf("6. Tempe\n");
+    printf("7. Perkedel\n");
+    printf("8. Sayur\n");
+    printf("9. Minuman\n");
+    printf("10. Keluar Aplikasi\n");
+    printf("======================\n");
+    printf("Silahkan Pilih Menu Kategori Anda : ");
+    scanf("%d", &menuKategori);
+    }while( menuKategori > 10 || menuKategori < 1 );
+
+    switch(menuKategori){
+        case 1:
+        do{
+            do{
+            printf("\nSilahkan Memilih Menu Nasi Berdasarkan Nomor: \n");
+            printf("1. Nasi Putih : Rp3.000\n");
+            printf("2. Nasi Goreng : Rp15.000\n");
+            printf("3. Nasi Bakar : Rp10.000\n");
+            printf("4. Nasi Kuning : Rp12.000\n");
+            printf("5. Nasi Daun Jeruk : Rp7.000\n");
+            printf("6. Nasi Uduk : Rp12.000\n");
+            printf("7. Nasi Merah : Rp4.000\n");
+            printf("Tolong Pilih Menu ( Ketik 0 Untuk Keluar Kategori ) : ");
+            scanf("%d", &subMenu);
+            }while( subMenu > 7 || subMenu < 1 );
+
+            if ( subMenu == 1 ){
+                printf("\nAnda Berhasil Menambahkan Nasi Putih !\n");
+                totalHarga += nasiPutih;
+            } else if( subMenu == 2){
+                printf("\nAnda Berhasil Menambahkan Nasi Goreng !\n");
+                totalHarga += nasiGoreng;
+            } else if( subMenu == 3){
+                printf("\nAnda Berhasil Menambahkan Nasi Bakar !\n");
+                totalHarga += nasiBakar;
+            } else if( subMenu == 4){
+                printf("\nAnda Berhasil Menambahkan Nasi Kuning !\n");
+                totalHarga += nasiKuning;
+            } else if( subMenu == 5){
+                printf("\nAnda Berhasil Menambahkan Nasi Daun Jeruk !\n");
+                totalHarga += nasiDaunJeruk;
+            } else if( subMenu == 6){
+                printf("\nAnda Berhasil Menambahkan Nasi Uduk !\n");
+                totalHarga += nasiUduk;
+            } else if( subMenu == 7){
+                printf("\nAnda Berhasil Menambahkan Nasi Merah !\n");
+                totalHarga += nasiMerah;
+            } else if( subMenu == 0 ){
+                break;
+            } 
+
+            printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori ( Y / N ): ");
+            scanf("%s", &Konfirmasi);
+        }while( Konfirmasi == 'Y' || Konfirmasi == 'y' );
+    
+    case 2:
+    printf("Silahkan memilih jensi ayam sesuai nomor:\n");
+    printf("1.Ayam goreng : Rp 15.000\n");
+    printf("2.Ayam bakar : Rp 17.000\n");
+    printf("3.Ayam geprek : Rp 15.000\n");
+    printf("4.Ayam tulang lunak : Rp 15.000\n");
+    printf("5.Ayam pop : Rp 8.000\n");
+    scanf("%d",&subMenu);
+    while( subMenu > 1 || subMenu < 6 ){
+
+            if ( subMenu == 1 ){
+                printf("\nAnda Berhasil Menambahkan Ayam Goreng !\n");
+                totalHarga += ayamGoreng;
+            } else if( subMenu == 2){
+                printf("\nAnda Berhasil Menambahkan Ayam Bakar !\n");
+                totalHarga += ayamBakar;
+            } else if( subMenu == 3){
+                printf("\nAnda Berhasil Menambahkan Ayam Geprek !\n");
+                totalHarga += ayamGeprek;
+            } else if( subMenu == 4){
+                printf("\nAnda Berhasil Menambahkan Ayam Tulang Lunak !\n");
+                totalHarga += ayamTulangLunak;
+            } else if( subMenu == 5){
+                printf("\nAnda Berhasil Menambahkan Ayam Pop !\n");
+                totalHarga += ayamPop;
+            } 
+                break;
+            } 
+
+    case 3:
+    printf("silahkan memilih menu seafood sesuai angka yang kami sediakan:\n");
+    printf("1.ikanGoreng : Rp15.000\n");
+    printf("2.ikanBakar : Rp18.000\n");
+    printf("3.ikanGurame : Rp23.000\n");
+    printf("4.udangSausTiram : Rp19.000\n");
+    scanf("%d",&subMenu);
+
+    while( subMenu > 1 || subMenu < 5 ){
+       if ( subMenu == 1 ){
+                printf("\nAnda Berhasil Menambahkan Ikan Goreng !\n");
+                totalHarga += ikanGoreng;
+            } else if( subMenu == 2){
+                printf("\nAnda Berhasil Menambahkan Ikan Bakar !\n");
+                totalHarga += ikanBakar;
+            } else if( subMenu == 3){
+                printf("\nAnda Berhasil Menambahkan Ikan Gurame !\n");
+                totalHarga += ikanGurame;
+            } else if( subMenu == 4){
+                printf("\nAnda Berhasil Menambahkan Udang Saus Tiram !\n");
+                totalHarga += udangSausTiram;
+            } 
+
+                break;
+            }
+
+            printf("Total Harga Pesananmu adalah: %d", totalHarga);
+
+    }
+
+    return 0;
+}
+
+/*
+START
+Display “Welcome to Warteg Palu\n”
+Display ”Menu\n”
+Display “1. Nasi\n”
+Display "2. Ayam\n”
+Display "3. Seafood\n”
+Display “4. Bebek\n”
+Display "5. Tahu\n”
+Display "6. Tempe\n”
+Display "7. Perkedel\n”
+Display “8. Sayur\n”
+Display “9. Minuman\n”
+Display “10. Quit Menu\n”
+Display "Please Select Food Category by Number\n”
+Input selectMenu
+Switch(selectMenu)
+	Case 1
+	Display “Nasi Putih : Rp3.000”
+	Display “Nasi Goreng : Rp15.000”
+	Display “Nasi Bakar : Rp10.000”
+	Display “Nasi Kuning : Rp12.000”
+	Display “Nasi Daun Jeruk : Rp7.000”
+	Display “Nasi Uduk : Rp12.000”
+	Display “Nasi Merah : Rp4.000”
+	Display “Please Select the Menu”
+	Input Menu
+	Display “Do you want to another menu (Y/N) ?”
+	Break;
+
+	Case 2
+	Display “Ayam Goreng : Rp15.000”
+	Display “Ayam Bakar : Rp17.000”
+	Display “Ayam Geprek : Rp15.000”
+	Display “Ayam Tulang Lunak: Rp15.000”
+	Display “Ayam Pop : Rp8.000”
+Display “Please Select the Menu”
+	Input Menu
+	Break;
+
+	Case 3
+	Display “Ikan Goreng : Rp15.000”
+	Display “Ikan Bakar  : Rp18.000”
+	Display “Ikan Gurame : Rp23.000”
+	Display “Udang Saus Tiram : Rp19.000”
+Display “Please Select the Menu”
+	Input Menu
+
+	Break;
+
+	Case 4
+	Display “Bebek  Goreng : Rp18.000”
+	Display “Bebek Bakar : Rp20.000”
+	Display “Bebek Panggang : Rp23.000”
+Break;
+
+Case 5
+Display “Tahu Goreng : Rp5.000”
+Display “Pepes Tahu : Rp9.000”
+Break;
+
+Case 6
+Display “Tempe Gorenh : Rp6.000”
+Display “Tempe Bacem : Rp8.000”
+Display “Tempe Orek : Rp6.000”
+Break;
+
+Case 7
+Display “Perkedal Jagung : Rp3.000”
+Display “Perkedal Kentang : Rp6.000”
+Break;
+
+Case 8
+Display ”Sayur Sop : Rp12.000”
+Display “Sayur Asem : Rp12.000”
+Display "Soto Palu : Rp13.000”
+Display “Sayur Lodeh : Rp12.000”
+Break;
+
+Case 9
+Display”Es Teh Manis : Rp5.000”
+Display”Teh Manis Panas : Rp4.000”
+Display”Teh Tawar Panas : Rp2.000”
+Display”Teh Tawar Dingin : Rp3.000”
+Display”Kopi ABC : Rp5.000”
+Display”Kopi Susu : Rp7.000”
+Display”Red Velvet : Rp7.000”
+Display”Matcha: Rp7.000”
+Display”Pop Ice All Variants : Rp5.000”
+Display”Nutrisari All Variants : Rp5.000”
+Display”Air Mineral : Rp3.000”
+Break;
+
+Case 10
+END
+
+
+
+
+Display ”Please Select a Menu\n”
+*/
