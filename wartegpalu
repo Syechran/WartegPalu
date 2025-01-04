@@ -1,260 +1,706 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
-int main(){
-    int menuKategori,subMenu,totalHarga;
-    int nasiPutih = 3000, nasiGoreng = 15000, nasiBakar = 10000, nasiKuning = 12000;
-    int nasiDaunJeruk = 7000, nasiUduk = 12000, nasiMerah = 4000;
-    int ayamGoreng = 15000, ayamBakar = 17000, ayamGeprek = 15000, ayamTulangLunak = 15000;
-    int ayamPop = 8000;
-    int ikanGoreng = 15000, ikanBakar = 18000, ikanGurame = 23000, udangSausTiram = 19000;
-    int bebekGoreng = 18000, bebekBakar = 20000, bebekPanggang = 23000;
-    int tahuGoreng = 5000, pepesTahu = 9000;
-    int tempeGoreng = 6000, tempeBacem = 8000, tempeOrek = 6000;
-    int perkedalJagung = 3000, perkedalKentang = 6000;
-    int sayurSop = 12000, sayurAsem = 12000, sotoPalu = 13000, sayurLodeh = 12000;
-    int esTehManis = 5000, tehManisPanas = 4000, tehTawarPanas = 2000, tehTawarDingin = 3000;
-    int kopiABC = 5000, kopiSusu = 7000, redVelvet = 7000, matcha = 7000;
-    int popIceAllVariants = 5000, nutrisariAllVariants = 5000, airMineral = 3000;
-    int quantity[] = {};
-    char Konfirmasi;
+//Run Programnya di Visual Studio Code
+//Jika di Dev C++ akan mengalami error
 
-    printf("\n");
-    printf(" __     __     ______     ______     ______   ______     ______   \n");
-    printf("/\\ \\  _ \\ \\   /\\  __ \\   /\\  == \\   /\\__  _\\ /\\  ___\\   /\\  ___\\  \n");
-    printf("\\ \\ \\/ \".\\ \\  \\ \\  __ \\  \\ \\  __<   \\/_/\\ \\/ \\ \\  __\\   \\ \\ \\__ \\ \n");
-    printf(" \\ \\__/\".~\\_\\  \\ \\_\\ \\_\\  \\ \\_\\ \\_\\    \\ \\_\\  \\ \\_____\\  \\ \\_____\\\n");
-    printf("  \\/_/   \\/_/   \\/_/\\/_/   \\/_/ /_/     \\/_/   \\/_____/   \\/_____/ \n");
-    printf("                                                                    \n");
-    printf(" ______   ______     __         __  __                             \n");
-    printf("/\\  == \\ /\\  __ \\   /\\ \\       /\\ \\/\\ \\                            \n");
-    printf("\\ \\  _-/ \\ \\  __ \\  \\ \\ \\____  \\ \\ \\_\\ \\                           \n");
-    printf(" \\ \\_\\    \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_____\\                          \n");
-    printf("  \\/_/     \\/_/\\/_/   \\/_____/   \\/_____/                          \n");
-    printf("\n");
-    printf("\n");
-
-    do{
-    printf("=== Menu ===\n");
-    printf("1. Nasi\n");
-    printf("2. Ayam\n");
-    printf("3. Seafood\n");
-    printf("4. Bebek\n");
-    printf("5. Tahu\n");
-    printf("6. Tempe\n");
-    printf("7. Perkedel\n");
-    printf("8. Sayur\n");
-    printf("9. Minuman\n");
-    printf("10. Keluar Aplikasi\n");
-    printf("======================\n");
-    printf("Silahkan Pilih Menu Kategori Anda : ");
-    scanf("%d", &menuKategori);
-    }while( menuKategori > 10 || menuKategori < 1 );
-
-    switch(menuKategori){
-        case 1:
-        do{
-            do{
-            printf("\nSilahkan Memilih Menu Nasi Berdasarkan Nomor: \n");
-            printf("1. Nasi Putih : Rp3.000\n");
-            printf("2. Nasi Goreng : Rp15.000\n");
-            printf("3. Nasi Bakar : Rp10.000\n");
-            printf("4. Nasi Kuning : Rp12.000\n");
-            printf("5. Nasi Daun Jeruk : Rp7.000\n");
-            printf("6. Nasi Uduk : Rp12.000\n");
-            printf("7. Nasi Merah : Rp4.000\n");
-            printf("Tolong Pilih Menu ( Ketik 0 Untuk Keluar Kategori ) : ");
-            scanf("%d", &subMenu);
-            }while( subMenu > 7 || subMenu < 1 );
-
-            if ( subMenu == 1 ){
-                printf("\nAnda Berhasil Menambahkan Nasi Putih !\n");
-                totalHarga += nasiPutih;
-            } else if( subMenu == 2){
-                printf("\nAnda Berhasil Menambahkan Nasi Goreng !\n");
-                totalHarga += nasiGoreng;
-            } else if( subMenu == 3){
-                printf("\nAnda Berhasil Menambahkan Nasi Bakar !\n");
-                totalHarga += nasiBakar;
-            } else if( subMenu == 4){
-                printf("\nAnda Berhasil Menambahkan Nasi Kuning !\n");
-                totalHarga += nasiKuning;
-            } else if( subMenu == 5){
-                printf("\nAnda Berhasil Menambahkan Nasi Daun Jeruk !\n");
-                totalHarga += nasiDaunJeruk;
-            } else if( subMenu == 6){
-                printf("\nAnda Berhasil Menambahkan Nasi Uduk !\n");
-                totalHarga += nasiUduk;
-            } else if( subMenu == 7){
-                printf("\nAnda Berhasil Menambahkan Nasi Merah !\n");
-                totalHarga += nasiMerah;
-            } else if( subMenu == 0 ){
-                break;
-            } 
-
-            printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori ( Y / N ): ");
-            scanf("%s", &Konfirmasi);
-        }while( Konfirmasi == 'Y' || Konfirmasi == 'y' );
-    
-    case 2:
-    printf("Silahkan memilih jensi ayam sesuai nomor:\n");
-    printf("1.Ayam goreng : Rp 15.000\n");
-    printf("2.Ayam bakar : Rp 17.000\n");
-    printf("3.Ayam geprek : Rp 15.000\n");
-    printf("4.Ayam tulang lunak : Rp 15.000\n");
-    printf("5.Ayam pop : Rp 8.000\n");
-    scanf("%d",&subMenu);
-    while( subMenu > 1 || subMenu < 6 ){
-
-            if ( subMenu == 1 ){
-                printf("\nAnda Berhasil Menambahkan Ayam Goreng !\n");
-                totalHarga += ayamGoreng;
-            } else if( subMenu == 2){
-                printf("\nAnda Berhasil Menambahkan Ayam Bakar !\n");
-                totalHarga += ayamBakar;
-            } else if( subMenu == 3){
-                printf("\nAnda Berhasil Menambahkan Ayam Geprek !\n");
-                totalHarga += ayamGeprek;
-            } else if( subMenu == 4){
-                printf("\nAnda Berhasil Menambahkan Ayam Tulang Lunak !\n");
-                totalHarga += ayamTulangLunak;
-            } else if( subMenu == 5){
-                printf("\nAnda Berhasil Menambahkan Ayam Pop !\n");
-                totalHarga += ayamPop;
-            } 
-                break;
-            } 
-
-    case 3:
-    printf("silahkan memilih menu seafood sesuai angka yang kami sediakan:\n");
-    printf("1.ikanGoreng : Rp15.000\n");
-    printf("2.ikanBakar : Rp18.000\n");
-    printf("3.ikanGurame : Rp23.000\n");
-    printf("4.udangSausTiram : Rp19.000\n");
-    scanf("%d",&subMenu);
-
-    while( subMenu > 1 || subMenu < 5 ){
-       if ( subMenu == 1 ){
-                printf("\nAnda Berhasil Menambahkan Ikan Goreng !\n");
-                totalHarga += ikanGoreng;
-            } else if( subMenu == 2){
-                printf("\nAnda Berhasil Menambahkan Ikan Bakar !\n");
-                totalHarga += ikanBakar;
-            } else if( subMenu == 3){
-                printf("\nAnda Berhasil Menambahkan Ikan Gurame !\n");
-                totalHarga += ikanGurame;
-            } else if( subMenu == 4){
-                printf("\nAnda Berhasil Menambahkan Udang Saus Tiram !\n");
-                totalHarga += udangSausTiram;
-            } 
-
-                break;
-            }
-
-            printf("Total Harga Pesananmu adalah: %d", totalHarga);
-
-    }
-
-    return 0;
+void clear_screen() {
+#ifdef _WIN32
+    system("cls"); 
+#else
+    system("clear");  
+#endif
 }
 
-/*
-START
-Display “Welcome to Warteg Palu\n”
-Display ”Menu\n”
-Display “1. Nasi\n”
-Display "2. Ayam\n”
-Display "3. Seafood\n”
-Display “4. Bebek\n”
-Display "5. Tahu\n”
-Display "6. Tempe\n”
-Display "7. Perkedel\n”
-Display “8. Sayur\n”
-Display “9. Minuman\n”
-Display “10. Quit Menu\n”
-Display "Please Select Food Category by Number\n”
-Input selectMenu
-Switch(selectMenu)
-	Case 1
-	Display “Nasi Putih : Rp3.000”
-	Display “Nasi Goreng : Rp15.000”
-	Display “Nasi Bakar : Rp10.000”
-	Display “Nasi Kuning : Rp12.000”
-	Display “Nasi Daun Jeruk : Rp7.000”
-	Display “Nasi Uduk : Rp12.000”
-	Display “Nasi Merah : Rp4.000”
-	Display “Please Select the Menu”
-	Input Menu
-	Display “Do you want to another menu (Y/N) ?”
-	Break;
+typedef struct {
+    char nama[50];
+    int harga;
+} Menu;
 
-	Case 2
-	Display “Ayam Goreng : Rp15.000”
-	Display “Ayam Bakar : Rp17.000”
-	Display “Ayam Geprek : Rp15.000”
-	Display “Ayam Tulang Lunak: Rp15.000”
-	Display “Ayam Pop : Rp8.000”
-Display “Please Select the Menu”
-	Input Menu
-	Break;
+int pilihanSort;
+char Konfirmasi;
 
-	Case 3
-	Display “Ikan Goreng : Rp15.000”
-	Display “Ikan Bakar  : Rp18.000”
-	Display “Ikan Gurame : Rp23.000”
-	Display “Udang Saus Tiram : Rp19.000”
-Display “Please Select the Menu”
-	Input Menu
+void sortMenuByPrice(Menu menu[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (menu[j].harga > menu[j + 1].harga) {
+                Menu temp = menu[j];
+                menu[j] = menu[j + 1];
+                menu[j + 1] = temp;
+            }
+        }
+    }
+}
 
-	Break;
+void sortMenuByName(Menu menu[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (strcmp(menu[j].nama, menu[j + 1].nama) > 0) {
+                Menu temp = menu[j];
+                menu[j] = menu[j + 1];
+                menu[j + 1] = temp;
+            }
+        }
+    }
+}
 
-	Case 4
-	Display “Bebek  Goreng : Rp18.000”
-	Display “Bebek Bakar : Rp20.000”
-	Display “Bebek Panggang : Rp23.000”
-Break;
+int compareMenu(const void *a, const void *b) {
+    return strcmp(((Menu*)a)->nama, ((Menu*)b)->nama);
+}
 
-Case 5
-Display “Tahu Goreng : Rp5.000”
-Display “Pepes Tahu : Rp9.000”
-Break;
+int binarySearch(Menu daftarMenu[], int size, char key[]) {
+    int low = 0, high = size - 1, mid;
 
-Case 6
-Display “Tempe Gorenh : Rp6.000”
-Display “Tempe Bacem : Rp8.000”
-Display “Tempe Orek : Rp6.000”
-Break;
+    while (low <= high) {
+        mid = (low + high) / 2;
+        int cmp = strcmp(key, daftarMenu[mid].nama);
+        if (cmp == 0)
+            return mid;
+        else if (cmp < 0)
+            high = mid - 1;
+        else
+            low = mid + 1;
+    }
+    return -1;
+}
 
-Case 7
-Display “Perkedal Jagung : Rp3.000”
-Display “Perkedal Kentang : Rp6.000”
-Break;
+Menu daftarMenuNasi[] = {
+    {"Nasi Putih", 3000},
+    {"Nasi Goreng", 15000},
+    {"Nasi Bakar", 10000},
+    {"Nasi Kuning", 12000},
+    {"Nasi Daun Jeruk", 7000},
+    {"Nasi Uduk", 12000},
+    {"Nasi Merah", 4000}
+};
 
-Case 8
-Display ”Sayur Sop : Rp12.000”
-Display “Sayur Asem : Rp12.000”
-Display "Soto Palu : Rp13.000”
-Display “Sayur Lodeh : Rp12.000”
-Break;
+Menu daftarMenuAyam[] = {
+    {"Ayam Goreng", 15000},
+    {"Ayam Bakar", 17000},
+    {"Ayam Geprek", 15000},
+    {"Ayam Tulang Lunak", 15000},
+    {"Ayam Pop", 8000}
+};
 
-Case 9
-Display”Es Teh Manis : Rp5.000”
-Display”Teh Manis Panas : Rp4.000”
-Display”Teh Tawar Panas : Rp2.000”
-Display”Teh Tawar Dingin : Rp3.000”
-Display”Kopi ABC : Rp5.000”
-Display”Kopi Susu : Rp7.000”
-Display”Red Velvet : Rp7.000”
-Display”Matcha: Rp7.000”
-Display”Pop Ice All Variants : Rp5.000”
-Display”Nutrisari All Variants : Rp5.000”
-Display”Air Mineral : Rp3.000”
-Break;
+Menu daftarMenuSeafood[] = {
+    {"Ikan Goreng", 15000},
+    {"Ikan Bakar", 18000},
+    {"Ikan Gurame", 23000},
+    {"Udang Saus Tiram", 19000}
+};
 
-Case 10
-END
+Menu daftarMenuBebek[] = {
+    {"Bebek Goreng", 18000},
+    {"Bebek Bakar", 20000},
+    {"Bebek Panggang", 23000}
+};
 
+Menu daftarMenuTahu[] = {
+    {"Tahu Goreng", 5000},
+    {"Pepes Tahu", 9000}
+};
 
+Menu daftarMenuTempe[] = {
+    {"Tempe Goreng", 6000},
+    {"Tempe Bacem", 8000},
+    {"Tempe Orek", 6000}
+};
 
+Menu daftarMenuPerkedel[] = {
+    {"Perkedel Jagung", 3000},
+    {"Perkedel Kentang", 6000}
+};
 
-Display ”Please Select a Menu\n”
-*/
+Menu daftarMenuSayur[] = {
+    {"Sayur Sop", 12000},
+    {"Sayur Asem", 12000},
+    {"Soto Palu", 13000},
+    {"Sayur Lodeh", 12000}
+};
+
+Menu daftarMenuMinuman[] = {
+    {"Es Teh Manis", 5000},
+    {"Teh Manis Panas", 4000},
+    {"Teh Tawar Panas", 2000},
+    {"Teh Tawar Dingin", 3000},
+    {"Kopi ABC", 5000},
+    {"Kopi Susu", 7000},
+    {"Red Velvet", 7000},
+    {"Matcha", 7000},
+    {"Pop Ice All Variants", 5000},
+    {"Nutrisari All Variants", 5000},
+    {"Air Mineral", 3000}
+};
+
+int sizeNasi = sizeof(daftarMenuNasi) / sizeof(daftarMenuNasi[0]);
+int sizeAyam = sizeof(daftarMenuAyam) / sizeof(daftarMenuAyam[0]);
+int sizeSeafood = sizeof(daftarMenuSeafood) / sizeof(daftarMenuSeafood[0]);
+int sizeBebek = sizeof(daftarMenuBebek) / sizeof(daftarMenuBebek[0]);
+int sizeTahu = sizeof(daftarMenuTahu) / sizeof(daftarMenuTahu[0]);
+int sizeTempe = sizeof(daftarMenuTempe) / sizeof(daftarMenuTempe[0]);
+int sizePerkedel = sizeof(daftarMenuPerkedel) / sizeof(daftarMenuPerkedel[0]);
+int sizeSayur = sizeof(daftarMenuSayur) / sizeof(daftarMenuSayur[0]);
+int sizeMinuman = sizeof(daftarMenuMinuman) / sizeof(daftarMenuMinuman[0]);
+
+int totalHarga = 0; 
+
+void writeReceipt(char orders[], int total) {
+    FILE *receipt = fopen("receipt.txt", "a");
+    if (receipt == NULL) {
+        printf("\nError: Could not create receipt file.\n");
+        return;
+    }
+    fprintf(receipt, "============================\n");
+    fprintf(receipt, "      WARTEG PALU RECEIPT\n");
+    fprintf(receipt, "============================\n");
+    fprintf(receipt, "%s", orders); 
+    fprintf(receipt, "\nTotal Harga: Rp%d\n", total); 
+    fprintf(receipt, "\nTerima kasih telah memesan!\n");
+    fclose(receipt);
+    printf("\nBukti pesanan telah dibuat: receipt.txt\n");
+}
+
+int main(){
+    qsort(daftarMenuNasi, sizeNasi, sizeof(Menu), compareMenu);
+    qsort(daftarMenuAyam, sizeAyam, sizeof(Menu), compareMenu);
+    qsort(daftarMenuSeafood, sizeSeafood, sizeof(Menu), compareMenu);
+    qsort(daftarMenuBebek, sizeBebek, sizeof(Menu), compareMenu);
+    qsort(daftarMenuTahu, sizeTahu, sizeof(Menu), compareMenu);
+    qsort(daftarMenuTempe, sizeTempe, sizeof(Menu), compareMenu);
+    qsort(daftarMenuPerkedel, sizePerkedel, sizeof(Menu), compareMenu);
+    qsort(daftarMenuSayur, sizeSayur, sizeof(Menu), compareMenu);
+    qsort(daftarMenuMinuman, sizeMinuman, sizeof(Menu), compareMenu);
+    int menuKategori, subMenu, totalHarga = 0;
+    char orders[1000] = "";
+    char Konfirmasi;
+    char receipt[1000] = "";
+
+    do {
+        clear_screen();
+        printf(" __      __  ______  ____    ______  ____    ____      \n");
+        printf("/\\ \\  __/\\ \\ /\\  _  \\ /\\  _`\\ /\\__  _\\/\\  _`\\ /\\  _`\\    \n");
+        printf("\\ \\ \\/\\ \\ \\ \\ \\ \\L\\ \\ \\ \\L\\ \\/_/\\ \\/\\ \\ \\L\\_\\ \\ \\L\\_\\  \n");
+        printf(" \\ \\ \\ \\ \\ \\ \\ \\  __ \\ \\ ,  /  \\ \\ \\ \\ \\  _\\L\\ \\ \\L_L  \n");
+        printf("  \\ \\ \\_/ \\_\\ \\ \\ \\/\\ \\ \\ \\\\ \\  \\ \\ \\ \\ \\ \\L\\ \\ \\ \\/, \\ \n");
+        printf("   \\ `\\___x___/\\ \\_\\ \\_\\ \\_\\ \\_\\ \\ \\_\\ \\ \\____/\\ \\____/ \n");
+        printf("    '\\/__//__/  \\/_/\\/_/\\/_/\\_/ /  \\/_/  \\/___/  \\/___/  \n");
+        printf("                                                       \n");
+        printf("                                                       \n");
+        printf(" ____    ______  __       __  __                       \n");
+        printf("/\\  _`\\ /\\  _  \\ /\\ \\     /\\ \\/\\ \\                      \n");
+        printf("\\ \\ \\L\\ \\ \\ \\L\\ \\ \\ \\    \\ \\ \\ \\ \\                     \n");
+        printf(" \\ \\ ,__/\\ \\  __ \\ \\ \\  __\\ \\ \\ \\ \\                    \n");
+        printf("  \\ \\ \\/  \\ \\ \\/\\ \\ \\ \\L\\ \\\\ \\ \\_\\ \\                   \n");
+        printf("   \\ \\_\\   \\ \\_\\ \\_\\ \\____/ \\ \\____\\                   \n");
+        printf("    \\/_/    \\/_/\\/_/\\/___/   \\/____/                   \n");
+        printf("Selamat Datang di Warteg Palu\n\n");
+        printf("Kategori Menu:\n");
+        printf("1. Nasi\n");
+        printf("2. Ayam\n");
+        printf("3. Seafood\n");
+        printf("4. Bebek\n");
+        printf("5. Tahu\n");
+        printf("6. Tempe\n");
+        printf("7. Perkedel\n");
+        printf("8. Sayur\n");
+        printf("9. Minuman\n");
+        printf("10. Opsi untuk Searching Makanan\n");
+        printf("11. Keluar Aplikasi\n");
+        printf("Tolong Pilih Kategori Menu Berdasarkan Nomor: ");
+        scanf("%d", &menuKategori);
+
+        switch(menuKategori){
+            case 1:
+                int jumlahMenuNasi = sizeof(daftarMenuNasi) / sizeof(daftarMenuNasi[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuNasi, jumlahMenuNasi);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuNasi, jumlahMenuNasi);
+                }
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Nasi Berdasarkan Nomor:\n");
+                    
+                    for (int i = 0; i < jumlahMenuNasi; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuNasi[i].nama, daftarMenuNasi[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuNasi) {
+                        strcat(orders, daftarMenuNasi[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuNasi[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 2:
+                int jumlahMenuAyam = sizeof(daftarMenuAyam) / sizeof(daftarMenuAyam[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuAyam, jumlahMenuAyam);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuAyam, jumlahMenuAyam);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Ayam Berdasarkan Nomor:\n");
+                    
+                    for (int i = 0; i < jumlahMenuAyam; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuAyam[i].nama, daftarMenuAyam[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuAyam) {
+                        strcat(orders, daftarMenuAyam[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuAyam[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+            
+            case 3:
+                int jumlahMenuSeafood = sizeof(daftarMenuSeafood) / sizeof(daftarMenuSeafood[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuSeafood, jumlahMenuSeafood);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuSeafood, jumlahMenuSeafood);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Seafood Berdasarkan Nomor:\n");
+                    
+                    for (int i = 0; i < jumlahMenuSeafood; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuSeafood[i].nama, daftarMenuSeafood[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuSeafood) {
+                        strcat(orders, daftarMenuSeafood[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuSeafood[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 4:
+                int jumlahMenuBebek = sizeof(daftarMenuBebek) / sizeof(daftarMenuBebek[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuBebek, jumlahMenuBebek);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuBebek, jumlahMenuBebek);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Bebek Berdasarkan Nomor:\n");
+                    
+                    for (int i = 0; i < jumlahMenuBebek; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuBebek[i].nama, daftarMenuBebek[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuBebek) {
+                        strcat(orders, daftarMenuBebek[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuBebek[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 5:
+                int jumlahMenuTahu = sizeof(daftarMenuTahu) / sizeof(daftarMenuTahu[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuTahu, jumlahMenuTahu);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuTahu, jumlahMenuTahu);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Tahu Berdasarkan Nomor:\n");
+                    
+                    for (int i = 0; i < jumlahMenuTahu; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuTahu[i].nama, daftarMenuTahu[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuTahu) {
+                        strcat(orders, daftarMenuTahu[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuTahu[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 6:
+                int jumlahMenuTempe = sizeof(daftarMenuTempe) / sizeof(daftarMenuTempe[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuTempe, jumlahMenuTempe);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuTempe, jumlahMenuTempe);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Tempe Berdasarkan Nomor:\n");
+                    
+                    for (int i = 0; i < jumlahMenuTempe; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuTempe[i].nama, daftarMenuTempe[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuTempe) {
+                        strcat(orders, daftarMenuTempe[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuTempe[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 7:
+                int jumlahMenuPerkedel = sizeof(daftarMenuPerkedel) / sizeof(daftarMenuPerkedel[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuPerkedel, jumlahMenuPerkedel);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuPerkedel, jumlahMenuPerkedel);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Perkedel Berdasarkan Nomor:\n");
+
+                    for (int i = 0; i < jumlahMenuPerkedel; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuPerkedel[i].nama, daftarMenuPerkedel[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuPerkedel) {
+                        strcat(orders, daftarMenuPerkedel[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuPerkedel[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 8:
+                int jumlahMenuSayur = sizeof(daftarMenuSayur) / sizeof(daftarMenuSayur[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuSayur, jumlahMenuSayur);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuSayur, jumlahMenuSayur);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Sayur Berdasarkan Nomor:\n");
+
+                    for (int i = 0; i < jumlahMenuSayur; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuSayur[i].nama, daftarMenuSayur[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuSayur) {
+                        strcat(orders, daftarMenuSayur[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuSayur[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 9:
+                int jumlahMenuMinuman = sizeof(daftarMenuMinuman) / sizeof(daftarMenuMinuman[0]);
+                clear_screen();
+                printf("\nApakah Anda ingin mengurutkan menu?\n");
+                printf("1. Berdasarkan Harga (Termurah ke Termahal)\n");
+                printf("2. Berdasarkan Nama (A-Z)\n");
+                printf("3. Tidak Perlu Sorting\n");
+                printf("Masukkan Pilihan: ");
+                scanf("%d", &pilihanSort);
+
+                if (pilihanSort == 1) {
+                    sortMenuByPrice(daftarMenuMinuman, jumlahMenuMinuman);
+                } else if (pilihanSort == 2) {
+                    sortMenuByName(daftarMenuMinuman, jumlahMenuMinuman);
+                }
+
+                do {
+                    clear_screen();
+                    printf("\nSilahkan Memilih Menu Minuman Berdasarkan Nomor:\n");
+
+                    for (int i = 0; i < jumlahMenuMinuman; i++) {
+                        printf("%d. %s : Rp%d\n", i + 1, daftarMenuMinuman[i].nama, daftarMenuMinuman[i].harga);
+                    }
+                    printf("Tolong Pilih Menu (Ketik 0 Untuk Keluar Kategori): ");
+                    scanf("%d", &subMenu);
+
+                    if (subMenu == 0) break;
+
+                    if (subMenu > 0 && subMenu <= jumlahMenuMinuman) {
+                        strcat(orders, daftarMenuMinuman[subMenu - 1].nama);
+                        strcat(orders, "\n");
+                        totalHarga += daftarMenuMinuman[subMenu - 1].harga;
+                    } else {
+                        printf("Pilihan tidak valid.\n");
+                    }
+
+                    printf("\nApakah Kamu Ingin Mengulang Pesanan Kategori (Y / N): ");
+                    scanf(" %c", &Konfirmasi);
+                } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 10: 
+                do{
+                clear_screen();
+                printf("\nPilih Kategori untuk mencari menu:\n");
+                printf("1. Nasi\n");
+                printf("2. Ayam\n");
+                printf("3. Bebek\n");
+                printf("4. Seafood\n");
+                printf("5. Tahu\n");
+                printf("6. Tempe\n");
+                printf("7. Perkedel\n");
+                printf("8. Sayur\n");
+                printf("9. Minuman\n");
+                printf("0. Kembali ke menu utama\n");
+                printf("Masukkan pilihan kategori: ");
+                int kategori;
+                scanf("%d", &kategori);
+
+                if (kategori == 0) break;
+
+                char searchKey[50];
+                printf("\nMasukkan nama menu yang ingin dicari: ");
+                scanf(" %[^\n]s", searchKey);
+
+                int index = -1;
+
+                switch(kategori) {
+                    case 1: 
+                        index = binarySearch(daftarMenuNasi, sizeNasi, searchKey);
+                        break;
+                    case 2: 
+                        index = binarySearch(daftarMenuAyam, sizeAyam, searchKey);
+                        break;
+                    case 3: 
+                        index = binarySearch(daftarMenuBebek, sizeBebek, searchKey);
+                        break;
+                    case 4: 
+                        index = binarySearch(daftarMenuSeafood, sizeSeafood, searchKey);
+                        break;
+                    case 5: 
+                        index = binarySearch(daftarMenuTahu, sizeTahu, searchKey);
+                        break;
+                    case 6: 
+                        index = binarySearch(daftarMenuTempe, sizeTempe, searchKey);
+                        break;
+                    case 7: 
+                        index = binarySearch(daftarMenuPerkedel, sizePerkedel, searchKey);
+                        break;
+                    case 8: 
+                        index = binarySearch(daftarMenuSayur, sizeSayur, searchKey);
+                        break;
+                    case 9: 
+                        index = binarySearch(daftarMenuMinuman, sizeMinuman, searchKey);
+                        break;
+                    default:
+                        printf("Kategori tidak valid!\n");
+                        break;
+                }
+
+                if (index != -1) {
+                    clear_screen();
+                    printf("\nMenu ditemukan: %s, Harga: Rp%d\n", 
+                        (kategori == 1 ? daftarMenuNasi[index].nama :
+                        kategori == 2 ? daftarMenuAyam[index].nama :
+                        kategori == 3 ? daftarMenuBebek[index].nama :
+                        kategori == 4 ? daftarMenuSeafood[index].nama :
+                        kategori == 5 ? daftarMenuTahu[index].nama :
+                        kategori == 6 ? daftarMenuTempe[index].nama :
+                        kategori == 7 ? daftarMenuPerkedel[index].nama :
+                        kategori == 8 ? daftarMenuSayur[index].nama :
+                        daftarMenuMinuman[index].nama),
+                        (kategori == 1 ? daftarMenuNasi[index].harga :
+                        kategori == 2 ? daftarMenuAyam[index].harga :
+                        kategori == 3 ? daftarMenuBebek[index].harga :
+                        kategori == 4 ? daftarMenuSeafood[index].harga :
+                        kategori == 5 ? daftarMenuTahu[index].harga :
+                        kategori == 6 ? daftarMenuTempe[index].harga :
+                        kategori == 7 ? daftarMenuPerkedel[index].harga :
+                        kategori == 8 ? daftarMenuSayur[index].harga :
+                        daftarMenuMinuman[index].harga));
+                    
+                } else {
+                    clear_screen();
+                    printf("\nMenu tidak ditemukan.\n");
+                }
+
+                printf("Apakah Kembali ke Menu Utama ? (Y/N): ");
+                scanf(" %c", &Konfirmasi);
+                }while(Konfirmasi == 'Y' || Konfirmasi == 'y');
+                break;
+
+            case 11:
+                clear_screen();
+                printf("Terima kasih telah menggunakan aplikasi kami!\n");
+                break;
+
+            default:
+                clear_screen();
+                printf("Pilihan tidak valid.\n");
+                break;
+        }
+
+        if (menuKategori != 11) {
+            printf("\nApakah Anda ingin memesan dari kategori lain? (Y/N): ");
+            scanf(" %c", &Konfirmasi);
+        } else {
+            Konfirmasi = 'N';
+        }
+
+    } while (Konfirmasi == 'Y' || Konfirmasi == 'y');
+
+char total[50];
+clear_screen();
+sprintf(total, "\nTotal Harga: Rp%d\n", totalHarga);
+strcat(receipt, orders);
+strcat(receipt, total);
+
+clear_screen();
+printf("\n--- Bukti Pesanan Anda ---\n");
+printf("%s", receipt);
+
+writeReceipt(receipt, totalHarga); 
+
+return 0;
+}
